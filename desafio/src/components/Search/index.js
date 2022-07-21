@@ -20,9 +20,7 @@ export default function Search({
           <Button
             variant="secondary"
             onClick={() =>
-              searchInput !== ""
-                ? showProducts(searchInput)
-                : showProducts(productList)
+              searchInput !== "" ? showProducts(searchInput) : ""
             }
           >
             Pesquisar

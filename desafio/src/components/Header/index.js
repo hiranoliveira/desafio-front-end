@@ -53,7 +53,13 @@ export default function Header({
             handleClickRemover={handleClickRemover}
           />
         </div>
-        <p>Valor total: 170.00 MUDAR COM SOME</p>
+        <p>
+          Valor total: R${""}
+          {cart.reduce((acc, item) => {
+            let count = acc + Number(item.price);
+            return Math.round(count * 100) / 100;
+          }, 0)}
+        </p>
       </BoxAside>
     </>
   );
